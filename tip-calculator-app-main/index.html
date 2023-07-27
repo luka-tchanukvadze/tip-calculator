@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <main>
+    <header class="logo">
+      <img src="./images/logo.svg" alt="">
+    </header>
+
+    <div class="container">
+
+      <div class="left">
+        <p class="Bill">Bill</p>
+
+        <div class="relative">
+          <div class="bill-input">
+            <input type="text" placeholder="0" class="input1">
+          </div>
+          <div class="dolar">
+            <img src="./images/icon-dollar.svg" alt="">
+          </div>
+        </div>
+
+        <p class="tip">Select Tip %</p>
+        <div class="percent-grid">
+          <div class="nums num5">5%</div>
+          <div class="nums num10">10%</div>
+          <div class="nums num15">15%</div>
+          <div class="nums num25">25%</div>
+          <div class="nums num50">50%</div>
+          <div class="custom">
+            <input class="custom2" type="text" placeholder="Custom">
+          </div>
+        </div>
+
+        <p class="people-num">Number of People</p>
+        
+        <div class="relative">
+          <div class="people-input">
+            <input type="text" placeholder="0" class="input2">
+          </div>
+          <div class="man">
+            <img src="./images/icon-person.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="up">
+          <div class="result">
+            <p class="tip">Tip Amount <br>
+              <span class="span">/ person</span>
+            </p>
+  
+            <div class="final final1">
+              $0.00
+            </div>
+          </div>
+  
+          <div class="result">
+            <p class="tip">Total <br>
+              <span class="span">/ person</span>
+            </p>
+  
+            <div class="final final2">
+              $0.00
+            </div>
+          </div>
+        </div>
+
+        <div class="down">
+          <button class="reset">RESET</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  
+  <script src="index.js"></script>
+  
+</body>
+</html>
