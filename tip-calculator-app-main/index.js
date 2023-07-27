@@ -78,6 +78,10 @@ custom.addEventListener('input', () => {
 })
 
 reset.addEventListener('click', () => {
+  billInput.value = ''
+  peopleInput.value = ''
+  custom.value = ''
+
   tip.innerHTML = `$${backToZero.toFixed(2)}`
 
   total.innerHTML = `$${backToZero.toFixed(2)}`
