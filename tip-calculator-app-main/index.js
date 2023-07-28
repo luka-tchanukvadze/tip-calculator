@@ -1,14 +1,9 @@
 
 const billInput = document.querySelector('.input1')
 
-const percent5 = document.querySelector('.num5')
-const percent10 = document.querySelector('.num10')
-const percent15 = document.querySelector('.num15')
-const percent25 = document.querySelector('.num25')
-const percent50 = document.querySelector('.num50')
 const custom = document.querySelector('.custom2')
 
-const percentArray = [percent5, percent10, percent15, percent25, percent50]
+const myNums = document.querySelectorAll('.nums')
 
 const peopleInput = document.querySelector('.input2')
 
@@ -39,7 +34,7 @@ function tipAmount(percent){
 
   
 
-  if(isNaN(people)|| people <= 0){
+  if(isNaN(people) || people <= 0){
     alert('You forgot to type number of people')
   } else{
     tip.innerHTML = `$${tipNum.toFixed(2)}`
@@ -49,29 +44,19 @@ function tipAmount(percent){
 
 }
 
+
 peopleInput.addEventListener('input', () => {
   tipAmount(parseFloat(custom.value));
 });
 
-percent5.addEventListener('click', () => {
-  tipAmount(5)
-})
 
-percent10.addEventListener('click', () => {
-  tipAmount(10)
-})
 
-percent15.addEventListener('click', () => {
-  tipAmount(15)
-})
+myNums.forEach(num => {
+  num.addEventListener('click', () => {
+    tipAmount(parseFloat(num.textContent));
+  });
+});
 
-percent25.addEventListener('click', () => {
-  tipAmount(25)
-})
-
-percent50.addEventListener('click', () => {
-  tipAmount(50)
-})
 
 custom.addEventListener('input', () => {
   tipAmount(parseFloat(custom.value))
